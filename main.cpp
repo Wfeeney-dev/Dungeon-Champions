@@ -27,35 +27,35 @@ int main(void)
 	
 
 	// Main Menu Textures
-	Image bgImage = LoadImage("C:\\Users\\William\\Desktop\\Reverse_Engineering\\GameDev\\DungeonChampions\\assets\\title_screen\\menu_background.png");
+	Image bgImage = LoadImage("assets\\title_screen\\menu_background.png");
 	Texture2D bgTexture = LoadTextureFromImage(bgImage);
 	
-	Image titleImage = LoadImage("C:\\Users\\William\\Desktop\\Reverse_Engineering\\GameDev\\DungeonChampions\\assets\\title_screen\\menu_title.png");
+	Image titleImage = LoadImage("assets\\title_screen\\menu_title.png");
 	Texture2D titleTexture = LoadTextureFromImage(titleImage);
 
-	Image scrollImage = LoadImage("C:\\Users\\William\\Desktop\\Reverse_Engineering\\GameDev\\DungeonChampions\\assets\\title_screen\\menu_scroll.png");
+	Image scrollImage = LoadImage("assets\\title_screen\\menu_scroll.png");
 	Texture2D scrollTexture = LoadTextureFromImage(scrollImage);
 
-	Image playUnselectedImage = LoadImage("C:\\Users\\William\\Desktop\\Reverse_Engineering\\GameDev\\DungeonChampions\\assets\\title_screen\\menu_play.png");
+	Image playUnselectedImage = LoadImage("assets\\title_screen\\menu_play.png");
 	Texture2D playUnselectedTexture = LoadTextureFromImage(playUnselectedImage);
 
-	Image playSelectedImage = LoadImage("C:\\Users\\William\\Desktop\\Reverse_Engineering\\GameDev\\DungeonChampions\\assets\\title_screen\\menu_play_selected.png");
+	Image playSelectedImage = LoadImage("assets\\title_screen\\menu_play_selected.png");
 	Texture2D playSelectedTexture = LoadTextureFromImage(playSelectedImage);
 
-	Image settingsUnselectedImage = LoadImage("C:\\Users\\William\\Desktop\\Reverse_Engineering\\GameDev\\DungeonChampions\\assets\\title_screen\\menu_settings.png");
+	Image settingsUnselectedImage = LoadImage("assets\\title_screen\\menu_settings.png");
 	Texture2D settingsUnselectedTexture = LoadTextureFromImage(settingsUnselectedImage);
 
-	Image settingsSelectedImage = LoadImage("C:\\Users\\William\\Desktop\\Reverse_Engineering\\GameDev\\DungeonChampions\\assets\\title_screen\\menu_settings_selected.png");
+	Image settingsSelectedImage = LoadImage("assets\\title_screen\\menu_settings_selected.png");
 	Texture2D settingsSelectedTexture = LoadTextureFromImage(settingsSelectedImage);
 
-	Image quitUnselectedImage = LoadImage("C:\\Users\\William\\Desktop\\Reverse_Engineering\\GameDev\\DungeonChampions\\assets\\title_screen\\menu_quit.png");
+	Image quitUnselectedImage = LoadImage("assets\\title_screen\\menu_quit.png");
 	Texture2D quitUnselectedTexture = LoadTextureFromImage(quitUnselectedImage);
 
-	Image quitSelectedImage = LoadImage("C:\\Users\\William\\Desktop\\Reverse_Engineering\\GameDev\\DungeonChampions\\assets\\title_screen\\menu_quit_selected.png");
+	Image quitSelectedImage = LoadImage("assets\\title_screen\\menu_quit_selected.png");
 	Texture2D quitSelectedTexture = LoadTextureFromImage(quitSelectedImage);
 
 	// Settings Menu Textures
-	Image tempSettingsImage = LoadImage("C:\\Users\\William\\Desktop\\Reverse_Engineering\\GameDev\\DungeonChampions\\assets\\title_screen\\menu_settings.png");
+	Image tempSettingsImage = LoadImage("assets\\title_screen\\menu_settings.png");
 	Texture2D tempSettingsTexture = LoadTextureFromImage(tempSettingsImage);
 
 	SetTargetFPS(60);
