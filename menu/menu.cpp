@@ -69,28 +69,28 @@ void GameLoadMenuTextures()
 
 void GameUpdateMenu(enum State* screenState, enum State* menuHovered, Vector2 mouseLocation)
 {
-	int playY = screenHeight / 2 + 25;
-	int settingsY = screenHeight / 2 + 65;
-	int quitY = screenHeight / 2 + 105;
+	int playY = virScreenHeight / 2 + 25;
+	int settingsY = virScreenHeight / 2 + 65;
+	int quitY = virScreenHeight / 2 + 105;
 
 	if (*screenState == State::MENU)
 	{
 		Rectangle playBounds = {
-			(float)(screenWidth / 2 - playSelectedTexture.width / 2),
+			(float)(virScreenWidth / 2 - playSelectedTexture.width / 2),
 			(float)playY,
 			(float)playSelectedTexture.width,
 			(float)playSelectedTexture.height
 		};
 
 		Rectangle settingsBounds = {
-			(float)(screenWidth / 2 - settingsSelectedTexture.width / 2),
+			(float)(virScreenWidth / 2 - settingsSelectedTexture.width / 2),
 			(float)settingsY,
 			(float)settingsSelectedTexture.width,
 			(float)settingsSelectedTexture.height
 		};
 
 		Rectangle quitBounds = {
-			(float)(screenWidth / 2 - quitSelectedTexture.width / 2),
+			(float)(virScreenWidth / 2 - quitSelectedTexture.width / 2),
 			(float)quitY,
 			(float)quitSelectedTexture.width,
 			(float)quitSelectedTexture.height
@@ -127,8 +127,8 @@ void GameUpdateMenu(enum State* screenState, enum State* menuHovered, Vector2 mo
 	if (*screenState == State::SETTINGS)
 	{
 		Rectangle tempSettingsBounds = {
-			(float)(screenWidth / 2 - tempSettingsTexture.width / 2),
-			(float)(screenHeight / 2),
+			(float)(virScreenWidth / 2 - tempSettingsTexture.width / 2),
+			(float)(virScreenHeight / 2),
 			(float)tempSettingsTexture.width,
 			(float)tempSettingsTexture.height,
 		};
@@ -149,9 +149,9 @@ void GameUpdateMenu(enum State* screenState, enum State* menuHovered, Vector2 mo
 void GameDrawMenu(enum State* screenState, enum State* menuHovered)
 {
 
-	int playY = screenHeight / 2 + 25;
-	int settingsY = screenHeight / 2 + 65;
-	int quitY = screenHeight / 2 + 105;
+	int playY = virScreenHeight / 2 + 25;
+	int settingsY = virScreenHeight / 2 + 65;
+	int quitY = virScreenHeight / 2 + 105;
 
 	// Main Menu
 	//----------------------------------------------------------------------------------
@@ -159,39 +159,39 @@ void GameDrawMenu(enum State* screenState, enum State* menuHovered)
 	{
 		DrawTexture(
 			bgTexture,
-			screenWidth / 2 - bgTexture.width / 2,
-			screenHeight / 2 - bgTexture.height / 2,
+			virScreenWidth / 2 - bgTexture.width / 2,
+			virScreenHeight / 2 - bgTexture.height / 2,
 			WHITE);
 		DrawTexture(
 			scrollTexture,
-			screenWidth / 2 - scrollTexture.width / 2,
-			screenHeight / 2 + 5,
+			virScreenWidth / 2 - scrollTexture.width / 2,
+			virScreenHeight / 2 + 5,
 			WHITE);
 		DrawTexture(
 			titleTexture,
-			screenWidth / 2 - titleTexture.width / 2,
-			screenHeight / 2 - 180,
+			virScreenWidth / 2 - titleTexture.width / 2,
+			virScreenHeight / 2 - 180,
 			WHITE);
 
 		// Play button: swap to the selected version while hovered
 		Texture2D playTexture = (*menuHovered == PLAY) ? playSelectedTexture : playUnselectedTexture;
 		DrawTexture(
 			playTexture,
-			screenWidth / 2 - playTexture.width / 2,
+			virScreenWidth / 2 - playTexture.width / 2,
 			playY,
 			WHITE);
 
 		Texture2D settingsTexture = (*menuHovered == SETTINGS) ? settingsSelectedTexture : settingsUnselectedTexture;
 		DrawTexture(
 			settingsTexture,
-			screenWidth / 2 - settingsTexture.width / 2,
+			virScreenWidth / 2 - settingsTexture.width / 2,
 			settingsY,
 			WHITE);
 
 		Texture2D quitTexture = (*menuHovered == QUIT) ? quitSelectedTexture : quitUnselectedTexture;
 		DrawTexture(
 			quitTexture,
-			screenWidth / 2 - quitTexture.width / 2,
+			virScreenWidth / 2 - quitTexture.width / 2,
 			quitY,
 			WHITE);
 	}
@@ -201,14 +201,14 @@ void GameDrawMenu(enum State* screenState, enum State* menuHovered)
 	{
 		DrawTexture(
 			bgTexture,
-			screenWidth / 2 - bgTexture.width / 2,
-			screenHeight / 2 - bgTexture.height / 2,
+			virScreenWidth / 2 - bgTexture.width / 2,
+			virScreenHeight / 2 - bgTexture.height / 2,
 			WHITE);
 
 		DrawTexture(
 			tempSettingsTexture,
-			screenWidth / 2 - tempSettingsTexture.width / 2,
-			screenHeight / 2,
+			virScreenWidth / 2 - tempSettingsTexture.width / 2,
+			virScreenHeight / 2,
 			WHITE);
 	}
 	//----------------------------------------------------------------------------------
